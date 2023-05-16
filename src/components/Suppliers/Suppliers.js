@@ -4,6 +4,8 @@ import { URL_SUPPLIERS } from "../_Utils/Urls"
 import Alert from "../Alert/Alert";
 import { Link } from "react-router-dom";
 import SupplierManager from "./SupplierManager";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTruckField } from "@fortawesome/free-solid-svg-icons";
 import "./Suppliers.scss"
 
 
@@ -29,7 +31,7 @@ const Suppliers = () => {
 
             <>
                 <div className="sup-title">
-                    <h5>Suppliers</h5>
+                    <h5> <FontAwesomeIcon icon={faTruckField} /> SUPPLIERS</h5>
                 </div>
                 <div className="container suppliers-top">
                     <Link to="new" className="btn btn-outline-success btn-sm">New Supplier</Link>

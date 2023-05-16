@@ -5,6 +5,8 @@ import { useGet } from "../_Hooks/Customs";
 import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Alert from "../Alert/Alert";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIceCream } from "@fortawesome/free-solid-svg-icons";
 import "./Products.scss"
 
 
@@ -32,7 +34,7 @@ const Products = () => {
             <>
 
                 <div className="pr-title">
-                    <h5>Products</h5>
+                    <h5><FontAwesomeIcon icon={faIceCream} />PRODUCTS</h5>
                 </div>
                 <div className="newProdBtn">
                     <Link className="btn btn-sm btn-outline-success m-2" to="new">Add new product </Link>

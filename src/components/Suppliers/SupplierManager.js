@@ -19,7 +19,7 @@ const SupplierManager = ({ supplier, deleteSuccess }) => {
   return (
     <article className="col-12 col-md-6 col-lg-4">
       <div className="supplier-panel m-2 p-2">
-        <Card border="primary">
+        <Card>
           <Card.Body>
             <Card.Title>{supplier.name}</Card.Title>
             <Card.Text>

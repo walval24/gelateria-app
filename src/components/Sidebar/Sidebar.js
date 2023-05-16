@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Navbar, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import{faBars} from '@fortawesome/free-solid-svg-icons';
+import{faBars,faIceCream,faTruckField,faHouse,faIdBadge } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 import "./Sidebar.scss"
@@ -33,16 +33,13 @@ const Sidebar = () => {
                 <Offcanvas.Body>
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link active" onClick={handleClose} >Home</Link>
+                            <Link to="/" className="nav-link active" onClick={handleClose} > <FontAwesomeIcon icon={faHouse} /> Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="products" className="nav-link"  onClick={handleClose} >Products</Link>
+                            <Link to="products" className="nav-link"  onClick={handleClose} > <FontAwesomeIcon icon={faIceCream} /> Products</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="" className="nav-link"  onClick={handleClose} >Contacts</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="suppliers" className="nav-link"  onClick={handleClose} >Suppliers</Link>
+                            <Link to="suppliers" className="nav-link"  onClick={handleClose} > <FontAwesomeIcon icon={faTruckField} /> Suppliers</Link>
                         </li>
                     </ul>
                 </Offcanvas.Body>
