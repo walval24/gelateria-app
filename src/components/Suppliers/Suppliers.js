@@ -4,6 +4,7 @@ import { URL_SUPPLIERS } from "../_Utils/Urls"
 import Alert from "../Alert/Alert";
 import { Link } from "react-router-dom";
 import SupplierManager from "./SupplierManager";
+import "./Suppliers.scss"
 
 
 
@@ -27,9 +28,10 @@ const Suppliers = () => {
         return (
 
             <>
-
-                <div className="container suppliers-top">
+                <div className="sup-title">
                     <h5>Suppliers</h5>
+                </div>
+                <div className="container suppliers-top">
                     <Link to="new" className="btn btn-outline-success btn-sm">New Supplier</Link>
                     <div className="row">
                         {data.map(supplier => (

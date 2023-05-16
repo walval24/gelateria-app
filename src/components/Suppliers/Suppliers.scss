@@ -1,11 +1,32 @@
 
+.container.suppliers-top {
+ 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .sup-title {
+    background-color: #3ca859;
+    padding: 20px;
+    margin-bottom: 7px;
+
+    h5 {
+      color: white;
+      flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    }
+  }
+  
 .supplier-panel {
     display: flex;
     flex-wrap: wrap;
 
     >div {
-        flex-basis: 80%;
+        flex-basis: 100%;
 
         @media (min-width: 576px) {
             flex-basis: 100%;
@@ -25,8 +46,9 @@
     }
 
     .alert-title {
-        font-size: large;
+        font-size: medium;
     }
+
 
     .card {
         background-color: #3ca859;
