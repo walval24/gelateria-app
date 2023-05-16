@@ -10,6 +10,7 @@ import { faIceCream } from "@fortawesome/free-solid-svg-icons";
 import "./Products.scss"
 
 
+
 const Products = () => {
     const { data, error, isLoading, mutate } = useGet(URL_PRODUCTS);
 
@@ -25,9 +26,6 @@ const Products = () => {
         setAlertMessage("Product deleted");
         setAlertShow(true);
     }
-
-
-
     if (data) {
 
         return (

@@ -54,8 +54,8 @@ const ProductTable = ({ product, deleteSuccess }) => {
                 <td className="align-middle">
                     <div>{supplier ? supplier.name : ""}</div>
                 </td>
-
             </tr>
+    
         </>
 
     );
