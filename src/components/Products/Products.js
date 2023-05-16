@@ -45,6 +45,7 @@ const Products = () => {
                             <th>Vegan</th>
                             <th>Dairy Free</th>
                             <th>Nut Free</th>
+                            <th>Supplier</th>
                         </tr>
                     </thead>
                     <tbody>

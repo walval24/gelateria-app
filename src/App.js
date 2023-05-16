@@ -4,6 +4,10 @@ import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
 import EditProduct from "./components/ProductPanel/EditProduct";
 import NewProduct from "./components/ProductPanel/NewProduct";
+import Suppliers from "./components/Suppliers/Suppliers";
+import NewSupplier from "./components/SupplierPanel/NewSupplier";
+import EditSupplier from "./components/SupplierPanel/EditSupplier";
+
 
 
 function App() {
@@ -16,6 +20,9 @@ function App() {
             <Route path="edit/:id" element={<EditProduct />}/>
             <Route path="new" element={<NewProduct/>}/>
           </Route>
+          <Route path="suppliers" element={<Suppliers/>} />
+          <Route path="suppliers/new" element={<NewSupplier/>}/>
+          <Route path="suppliers/edit/:id" element={<EditSupplier/>}/>
         </Route>
       </Routes>
     </Router>

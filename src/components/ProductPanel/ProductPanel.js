@@ -3,8 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react"
 import { usePost, usePut } from "../_Hooks/Customs";
 import Alert from "../Alert/Alert";
-import { URL_PRODUCTS } from "../_Utils/Urls";
+import { URL_PRODUCTS, URL_SUPPLIERS } from "../_Utils/Urls";
 import "./ProductPanel.scss";
+import FetchSelect from "../FetchSelect/FetchSelect";
 
 
 
@@ -18,6 +19,7 @@ const ProductPanel = ({ data = {}, mutate }) => {
         dairyFree: false,
         nutfree: false,
         cover: "",
+        supplierId: 0
 
     })
 
@@ -38,10 +40,11 @@ const ProductPanel = ({ data = {}, mutate }) => {
                 vegan: data.vegan,
                 dairyFree: data.dairyFree,
                 nutfree: data.nutfree,
+                supplierId:data.supplierId,
                 cover: "",
             });
         }
-    }, [data.id, data.name, data.vegan, data.dairyFree, data.nutfree])
+    }, [data.id, data.name, data.vegan, data.dairyFree, data.nutfree, data.supplierId])
 
     const getBase64 = async (file) => {
 
@@ -103,8 +106,6 @@ const ProductPanel = ({ data = {}, mutate }) => {
                     <label className=" form-lable">Product Name</label>
                     <input className=" form-control form-control-sm" name="name" value={product.name} onChange={handleChange} />
                 </div>
-
-
                 <div className="col-4">
                     <label className="form-label">Vegan</label>
                     <select className="form-control form-control-sm" name="vegan" value={product.vegan} onChange={handleChange}>
@@ -112,7 +113,6 @@ const ProductPanel = ({ data = {}, mutate }) => {
                         <option value={false}>False</option>
                     </select>
                 </div>
-
                 <div className="col-4">
                     <label className="form-label">Dairy Free</label>
                     <select className="form-control form-control-sm" name="dairyFree" value={product.dairyFree} onChange={handleChange}>
@@ -120,7 +120,6 @@ const ProductPanel = ({ data = {}, mutate }) => {
                         <option value={false}>False</option>
                     </select>
                 </div>
-
                 <div className="col-4">
                     <label className="form-label">Nut Free</label>
                     <select className="form-control form-control-sm" name="nutfree" value={product.nutfree} onChange={handleChange}>
@@ -128,11 +127,13 @@ const ProductPanel = ({ data = {}, mutate }) => {
                         <option value={false}>False</option>
                     </select>
                 </div>
-
-
                 <div className=" col-12">
                     <label className=" form-lable">Image</label>
                     <input className=" form-control form-control-sm" type="file" name="cover" onChange={handleChange} />
+                </div>
+                <div className=" col-6">
+                    <label className=" form-lable">Supplier</label>
+                    <FetchSelect className=" form-control form-control-sm" name="supplierId" value={product.supplierId} onChange={handleChange} url={URL_SUPPLIERS} />
                 </div>
                 <div className="col-12">
                     <div className=" d-flex justify-content-around mt-3">

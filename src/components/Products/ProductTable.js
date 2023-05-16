@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faTrashCan, faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { URL_PRODUCTS } from "../_Utils/Urls";
-import { useDelete } from "../_Hooks/Customs";
+import { URL_PRODUCTS, URL_SUPPLIERS } from "../_Utils/Urls";
+import { useDelete, useGet } from "../_Hooks/Customs";
 
 import "./Products.scss"
 
 const ProductTable = ({ product, deleteSuccess }) => {
 
     const base64prefix = "data:image/jpeg;base64,"
+
+    const { data: supplier, error: supplierError } = useGet(URL_SUPPLIERS, product.supplierId);
 
     const deleteData = useDelete(URL_PRODUCTS, product.id);
 
@@ -48,6 +50,9 @@ const ProductTable = ({ product, deleteSuccess }) => {
                     <div>
                         {product.nutfree ? <FontAwesomeIcon icon={faCheck} /> : <FontAwesomeIcon icon={faXmark} />}
                     </div>
+                </td>
+                <td className="align-middle">
+                    <div>{supplier ? supplier.name : ""}</div>
                 </td>
 
             </tr>
