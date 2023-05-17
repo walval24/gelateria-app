@@ -24,7 +24,9 @@ const HomeCards = () => {
 
     return (
         <div className="products-section">
+            <div className='home-pr-title'>
             <h3>Our Products</h3>
+            </div>
             <Slider slidesToShow={4} swipeToSlide={true} swipeThreshold={50} infinite={true}
                 responsive={[{ breakpoint: 500, settings: { slidesToShow: 3, }, },]}>
                 {products.map(product => (

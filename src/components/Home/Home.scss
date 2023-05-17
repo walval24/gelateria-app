@@ -16,27 +16,47 @@
 
   // Map Section
   .map-section {
+    background-color: #3ca859;
     text-align: center;
-    padding: 10px;
+
+
+    h3 {
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 20px;
+    }
 
     .google-map {
       width: 100%;
 
       iframe {
-        width: 90vw;
+        width: 100vw;
         height: 35vw;
-        padding: 10px;
+        
       }
     }
   }
 
   // Contact Section
   .contact-section {
+    background-color: #3ca859;
     width: 100%;
     text-align: center;
+    color: white;
+
+    h3 {
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
     .customer-form {
-      width: 100%;
+      width: 65% !important;
 
       @media (min-width: 300px) {
         width: 87%;
@@ -51,6 +71,24 @@
   }
 
   // Card Component
+  .home-pr-title {
+    background-color: #3ca859;
+    padding: 20px;
+    margin-bottom: 7px;
+    align-items: center;
+
+    h3 {
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+  }
+
+
   .card {
     border: none;
 

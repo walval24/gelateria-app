@@ -1,41 +1,35 @@
 import { Carousel } from "react-bootstrap";
 import "./Home.scss";
 
+import caros1 from "../../assets/images/caros1.jpg";
+import caros2 from "../../assets/images/caros2.jpg";
+import caros3 from "../../assets/images/caros3.jpg";
+import caros4 from "../../assets/images/caros4.jpg";
+import caros5 from "../../assets/images/caros5.jpg";
 
 
 
 const HomeCarousel = () => {
-    return (
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://www.gelaterialacarraia.it/wp-content/uploads/2022/06/gelateria-lacarraia-firenze-tortagelato.jpg"
-              alt="First slide"
-            />
-            
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://www.gelaterialacarraia.it/wp-content/uploads/2022/06/gelateria-lacarraia-firenze-hours.jpg"
-              alt="Second slide"
-            />
-    
-           
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://www.gelaterialacarraia.it/wp-content/uploads/2022/06/gelateria-lacarraia-firenze-traditional2.jpg"
-              alt="Third slide"
-            />
-    
-            
-          </Carousel.Item>
-        </Carousel>
-      );
-    }
-    
+  return (
+    <Carousel>
+      <Carousel.Item>
+        <img  className="d-block w-100"  src={caros1}  alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img  className="d-block w-100"  src={caros2}  alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img  className="d-block w-100"  src={caros3}  alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img  className="d-block w-100"  src={caros4}  alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img  className="d-block w-100"  src={caros5}  alt="" />
+      </Carousel.Item>
+     
+    </Carousel>
+  );
+};
 
-export default HomeCarousel
+export default HomeCarousel;

@@ -1,26 +1,25 @@
-
 .container.suppliers-top {
- 
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+}
 
-  .sup-title {
+.sup-title {
     background-color: #3ca859;
     padding: 20px;
     margin-bottom: 7px;
 
     h5 {
-      color: white;
-      flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
-  }
-  
+}
+
 .supplier-panel {
     display: flex;
     flex-wrap: wrap;
@@ -42,7 +41,7 @@
     }
 
     .alert-danger {
-        font-weight:100;
+        font-weight: 100;
     }
 
     .alert-title {
@@ -51,12 +50,15 @@
 
 
     .card {
-        background-color: #3ca859;
-        color: #ffffff;
-        transition: background-color 0.3s ease-in-out;
-        position: relative;
-
        
+        color: #ffffff;
+        position: relative;
+        background: #3ca859ad !important;
+        box-shadow: 0 8px 32px 0 rgba(30, 46, 50, 0.563) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(50px) !important;
+
+
 
         .card-body {
             padding: 1rem;
@@ -71,9 +73,9 @@
 
             .btn {
                 margin-top: 0.5rem;
+                
             }
         }
     }
 }
-
 

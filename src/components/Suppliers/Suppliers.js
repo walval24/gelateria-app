@@ -30,6 +30,7 @@ const Suppliers = () => {
         return (
 
             <>
+            <div className="sup-back">
                 <div className="sup-title">
                     <h5> <FontAwesomeIcon icon={faTruckField} /> SUPPLIERS</h5>
                 </div>
@@ -43,6 +44,7 @@ const Suppliers = () => {
                     </div>
                 </div>
                 <Alert show={alertShow} onHide={alertDismiss} message={AlertMessage} />
+                </div>
             </>
         );
     }
