@@ -1,71 +1,80 @@
 .home {
+  display: flex;
+  flex-direction: column;
+
+  // Banner Section
+  .banner-figure {
     display: flex;
-    flex-direction: column;
-  
-    .banner-figure {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      img {
-        max-width: 20%;
-        max-height: 20%;
-      }
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 20%;
+      max-height: 20%;
     }
-  
-    .map-section {
-      text-align: center;
-      padding: 10px;
-  
-      .google-map {
-        width: 100%;
-  
-        iframe {
-          width: 90vw;
-          height: 35vw;
-          padding: 10px;
-        }
-      }
-    }
-  
-    .contact-section {
+  }
+
+  // Map Section
+  .map-section {
+    text-align: center;
+    padding: 10px;
+
+    .google-map {
       width: 100%;
-      text-align: center;
-  
-      .customer-form {
-        width: 100%;
-  
-        @media (min-width: 300px) {
-          width: 87%;
-          margin: 0 auto;
-        }
-      }
-    }
-  
-    .card {
-      border: none;
-  
-      .card-image {
-        width: 20vw;
-        height: auto;
-      }
-  
-      .card-title {
-        font-size: 18px; /* Default font size */
-      }
-  
-      .card-text {
-        font-size: 14px; /* Default font size */
-      }
-  
-      @media (max-width: 500px) {
-        .card-title.small {
-          font-size: 14px; /* Reduced font size */
-        }
-  
-        .card-text.small {
-          font-size: 12px; /* Reduced font size */
-        }
+
+      iframe {
+        width: 90vw;
+        height: 35vw;
+        padding: 10px;
       }
     }
   }
+
+  // Contact Section
+  .contact-section {
+    width: 100%;
+    text-align: center;
+
+    .customer-form {
+      width: 100%;
+
+      @media (min-width: 300px) {
+        width: 87%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Check Icon
+  .check {
+    color: rgb(140, 201, 48);
+  }
+
+  // Card Component
+  .card {
+    border: none;
+
+    .card-image {
+      width: 20vw;
+      height: auto;
+    }
+
+    .card-title {
+      font-size: 21px;
+    }
+
+    .card-text {
+      font-size: 14px;
+    }
+
+    @media (max-width: 529px) {
+      .card-title {
+        font-size: 16px;
+      }
+
+      .card-text {
+        font-size: 11px;
+      }
+    }
+  }
+}
