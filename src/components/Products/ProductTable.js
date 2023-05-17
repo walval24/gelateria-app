@@ -22,14 +22,6 @@ const ProductTable = ({ product, deleteSuccess }) => {
     return (
         <>
             <tr>
-                <td className=" align-middle">
-                    <Link className="btn text-info" to={"edit/" + product.id}>
-                        <FontAwesomeIcon icon={faPencil} />
-                    </Link>
-                    <button className="btn text-danger" onClick={performDelete}>
-                        <FontAwesomeIcon icon={faTrashCan} />
-                    </button>
-                </td>
                 <td className="align-middle">
                     <img src={base64prefix + product.cover} style={{ width: "100px" }} />
                 </td>
@@ -53,6 +45,14 @@ const ProductTable = ({ product, deleteSuccess }) => {
                 </td>
                 <td className="align-middle">
                     <div>{supplier ? supplier.name : ""}</div>
+                </td>
+                <td className=" align-middle">
+                    <Link className="btn text-warning" to={"edit/" + product.id}>
+                        <FontAwesomeIcon icon={faPencil} />
+                    </Link>
+                    <button className="btn text-secondary" onClick={performDelete}>
+                        <FontAwesomeIcon icon={faTrashCan} />
+                    </button>
                 </td>
             </tr>
     

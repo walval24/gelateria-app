@@ -9,8 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIceCream } from "@fortawesome/free-solid-svg-icons";
 import "./Products.scss"
 
-
-
 const Products = () => {
     const { data, error, isLoading, mutate } = useGet(URL_PRODUCTS);
 
@@ -43,12 +41,12 @@ const Products = () => {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Cover</th>
-                                <th>Product Name</th>
+                                <th></th>
                                 <th>Vegan</th>
                                 <th>Dairy Free</th>
                                 <th>Nut Free</th>
                                 <th>Supplier</th>
+                               
                             </tr>
                         </thead>
                         <tbody>
