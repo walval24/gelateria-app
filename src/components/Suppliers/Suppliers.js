@@ -22,7 +22,7 @@ const Suppliers = () => {
     }
 
     const deleteSuccess = () => {
-        setAlertMessage("Eliminazione avvenuta");
+        setAlertMessage("Successfully deleted");
         setAlertShow(true);
     }
 

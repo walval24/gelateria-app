@@ -42,7 +42,7 @@ const SupplierManager = ({ supplier, deleteSuccess }) => {
         </Card>
 
         <Alert className="mt-2" show={showDelete} variant="danger">
-          <Alert.Heading className="alert-title">Eliminare {supplier.name} ? </Alert.Heading>
+          <Alert.Heading className="alert-title">Delete Supplier {supplier.name} ? </Alert.Heading>
           {products && products.length > 0 ? (
             <p>{products.length} products will be deleted. Are you sure to proceed?</p>
           ) : (

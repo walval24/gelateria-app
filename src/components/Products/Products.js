@@ -42,7 +42,6 @@ const Products = () => {
                             <tr>
                                 <th></th>
                                 <th></th>
-                                <th>Vegan</th>
                                 <th>Dairy Free</th>
                                 <th>Nut Free</th>
                                 <th>Supplier</th>

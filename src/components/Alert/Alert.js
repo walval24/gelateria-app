@@ -1,18 +1,19 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import "./Alert.scss"
 
 const Alert = (props) => {
     return (
-        <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered >
+        <Modal {...props} className="modal" size="lg" aria-labelledby="contained-modal-title-vcenter" centered >
 
-            <Modal.Body>
+            <Modal.Body className='mod-body'>
                
                 <p>
                     {props.message}
                 </p>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onHide}>Conferma</Button>
+                <Button  onClick={props.onHide}>Confirm</Button>
             </Modal.Footer>
         </Modal>
     );

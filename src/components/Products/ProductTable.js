@@ -30,11 +30,6 @@ const ProductTable = ({ product, deleteSuccess }) => {
                 </td>
                 <td className="align-middle">
                     <div>
-                        {product.vegan ? <FontAwesomeIcon icon={faCheck} /> : <FontAwesomeIcon icon={faXmark} />}
-                    </div>
-                </td>
-                <td className="align-middle">
-                    <div>
                         {product.dairyFree ? <FontAwesomeIcon icon={faCheck} /> : <FontAwesomeIcon icon={faXmark} />}
                     </div>
                 </td>

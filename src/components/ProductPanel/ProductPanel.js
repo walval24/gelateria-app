@@ -9,13 +9,11 @@ import FetchSelect from "../FetchSelect/FetchSelect";
 
 
 
-
 const ProductPanel = ({ data = {}, mutate }) => {
 
     const [product, setProduct] = useState({
 
         name: "",
-        vegan: false,
         dairyFree: false,
         nutfree: false,
         cover: "",
@@ -37,14 +35,13 @@ const ProductPanel = ({ data = {}, mutate }) => {
         if (data.id > 0) {
             setProduct({
                 name: data.name,
-                vegan: data.vegan,
                 dairyFree: data.dairyFree,
                 nutfree: data.nutfree,
                 supplierId:data.supplierId,
                 cover: "",
             });
         }
-    }, [data.id, data.name, data.vegan, data.dairyFree, data.nutfree, data.supplierId])
+    }, [data.id, data.name, data.dairyFree, data.nutfree, data.supplierId])
 
     const getBase64 = async (file) => {
 
@@ -88,7 +85,7 @@ const ProductPanel = ({ data = {}, mutate }) => {
 
     }
     const submitSuccess = () => {
-        setAlertMessage("Salvataggio completato")
+        setAlertMessage("Successfully Saved"  )
         setAlertShow(true);
     }
     const alertDismiss = () => {
@@ -105,13 +102,6 @@ const ProductPanel = ({ data = {}, mutate }) => {
                 <div className=" col-6">
                     <label className=" form-lable">Product Name</label>
                     <input className=" form-control form-control-sm" name="name" value={product.name} onChange={handleChange} />
-                </div>
-                <div className="col-4">
-                    <label className="form-label">Vegan</label>
-                    <select className="form-control form-control-sm" name="vegan" value={product.vegan} onChange={handleChange}>
-                        <option value={true}>True</option>
-                        <option value={false}>False</option>
-                    </select>
                 </div>
                 <div className="col-4">
                     <label className="form-label">Dairy Free</label>

@@ -35,7 +35,6 @@ const HomeCards = () => {
                         <div className="card-body">
                             <h5 className="card-title">{product.name}</h5>
                             <p className="card-text">
-                                {product.vegan && <span>Vegan <FontAwesomeIcon className='check' icon={faCheck} /><br /></span>}
                                 {product.nutfree && <span>Nut-free <FontAwesomeIcon className='check' icon={faCheck} /><br /></span>}
                                 {product.dairyFree && <span>Dairy-free <FontAwesomeIcon className='check' icon={faCheck} /><br /></span>}
                             </p>
