@@ -6,8 +6,6 @@ import Alert from "../Alert/Alert";
 import { Link, useNavigate } from "react-router-dom";
 
 
-
-
 const SupplierPanel = ({ data = {} }) => {
 
     const [supplier, setSupplier] = useState({
@@ -53,6 +51,7 @@ const SupplierPanel = ({ data = {} }) => {
 
             postData(supplier, submitSucces);
         }
+     
     }
 
     const alertDismiss = () => {
@@ -70,25 +69,25 @@ const SupplierPanel = ({ data = {} }) => {
 
     return (
         <>
-            <form className="row">
+            <form className="row" onSubmit={handleSubmit}>
                 <div className="col-12">
                     <FloatingLabel controlId="txtName" label="Name" className="my-2">
-                        <input id="txtName" className="form-control" name="name" value={supplier.name} onChange={handleChange} placeholder="Name"></input>
+                        <input id="txtName" required className="form-control" name="name" value={supplier.name} onChange={handleChange} placeholder="Name"></input>
                     </FloatingLabel>
                 </div>
                 <div className="col-12">
                     <FloatingLabel controlId="txtPhoneNumber" label="PhoneNumber" className="my-2">
-                    <input id="txtPhoneNumber" pattern="[0-9]+" className="form-control" name="phoneNumber" value={supplier.phoneNumber} onChange={handleChange} placeholder="Phone Number" />
+                        <input id="txtPhoneNumber" required pattern="[0-9]+" className="form-control" name="phoneNumber" value={supplier.phoneNumber} onChange={handleChange} placeholder="Phone Number" />
                     </FloatingLabel>
                 </div>
                 <div className="col-12">
                     <FloatingLabel controlId="txtEmail" label="Email" className="my-2">
-                    <input id="txtEmail" type="email" className="form-control" name="email" value={supplier.email} onChange={handleChange} placeholder="Email" />
+                        <input id="txtEmail" required type="email" className="form-control" name="email" value={supplier.email} onChange={handleChange} placeholder="Email" />
                     </FloatingLabel>
                 </div>
                 <div className="col-12">
                     <div className="d-flex justify-content-around">
-                        <button className="btn btn-sm btn-outline-success" onClick={handleSubmit}>Save</button>
+                        <button className="btn btn-sm btn-outline-success" type="submit" >Save</button>
                         <Link className="btn btn-sm btn-outline-danger" to="/suppliers">Go Back</Link>
                     </div>
                 </div>

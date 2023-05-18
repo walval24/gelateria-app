@@ -38,7 +38,7 @@ const ProductPanel = ({ data = {}, mutate }) => {
                 dairyFree: data.dairyFree,
                 nutfree: data.nutfree,
                 supplierId:data.supplierId,
-                cover: "",
+                cover: data.cover ? data.cover : "",
             });
         }
     }, [data.id, data.name, data.dairyFree, data.nutfree, data.supplierId])
@@ -101,29 +101,29 @@ const ProductPanel = ({ data = {}, mutate }) => {
             <form className=" row" onSubmit={handleSubmit}>
                 <div className=" col-6">
                     <label className=" form-lable">Product Name</label>
-                    <input className=" form-control form-control-sm" name="name" value={product.name} onChange={handleChange} />
+                    <input className=" form-control form-control-sm" required name="name" value={product.name} onChange={handleChange} />
                 </div>
                 <div className="col-4">
                     <label className="form-label">Dairy Free</label>
-                    <select className="form-control form-control-sm" name="dairyFree" value={product.dairyFree} onChange={handleChange}>
+                    <select className="form-control form-control-sm" required  name="dairyFree" value={product.dairyFree} onChange={handleChange}>
                         <option value={true}>True</option>
                         <option value={false}>False</option>
                     </select>
                 </div>
                 <div className="col-4">
                     <label className="form-label">Nut Free</label>
-                    <select className="form-control form-control-sm" name="nutfree" value={product.nutfree} onChange={handleChange}>
+                    <select className="form-control form-control-sm" required  name="nutfree" value={product.nutfree} onChange={handleChange}>
                         <option value={true}>True</option>
                         <option value={false}>False</option>
                     </select>
                 </div>
                 <div className=" col-12">
                     <label className=" form-lable">Image</label>
-                    <input className=" form-control form-control-sm" type="file" name="cover" onChange={handleChange} />
+                    <input className=" form-control form-control-sm" required  type="file" name="cover" onChange={handleChange} />
                 </div>
                 <div className=" col-6">
                     <label className=" form-lable">Supplier</label>
-                    <FetchSelect className=" form-control form-control-sm" name="supplierId" value={product.supplierId} onChange={handleChange} url={URL_SUPPLIERS} />
+                    <FetchSelect className=" form-control form-control-sm" required  name="supplierId" value={product.supplierId} onChange={handleChange} url={URL_SUPPLIERS} />
                 </div>
                 <div className="col-12">
                     <div className=" d-flex justify-content-around mt-3">
