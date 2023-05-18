@@ -22,6 +22,8 @@ const HomeCards = () => {
             });
     }, []);
 
+
+
     return (
         <div className="products-section">
             <div className='home-pr-title'>

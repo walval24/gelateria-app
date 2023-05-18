@@ -16,9 +16,8 @@
 
   // Map Section
   .map-section {
-    background-color: #3ca859;
+    background-color: #126A16;
     text-align: center;
-
 
     h3 {
       color: white;
@@ -26,7 +25,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      margin: 20px;
+      font-weight: 300;
+      padding: 5px;
     }
 
     .google-map {
@@ -35,17 +35,20 @@
       iframe {
         width: 100vw;
         height: 35vw;
-        
       }
     }
   }
 
   // Contact Section
   .contact-section {
-    background-color: #3ca859;
+    background-color: #126A16;
     width: 100%;
     text-align: center;
     color: white;
+
+    .contact-stripe {
+      margin: 15px 0;
+    }
 
     h3 {
       color: white;
@@ -53,6 +56,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      font-weight: 300;
     }
 
     .customer-form {
@@ -72,8 +76,8 @@
 
   // Card Component
   .home-pr-title {
-    background-color: #3ca859;
-    padding: 20px;
+    background-color: #126A16;
+    padding: 5px;
     margin-bottom: 7px;
     align-items: center;
 
@@ -83,12 +87,11 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      font-weight: 300;
     }
-
-
   }
 
-
+  // Cards
   .card {
     border: none;
 

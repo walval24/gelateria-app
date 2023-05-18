@@ -1,82 +1,79 @@
+// Supplier style
 .container.suppliers-top {
-
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.sup-title {
-    background-color: #3ca859;
-    padding: 20px;
+  }
+  // Title
+  .sup-title {
+    background-color: #126A16;
+    padding: 7px;
     margin-bottom: 7px;
-
+  
     h5 {
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 300;
     }
-}
-
-.supplier-panel {
+  }
+  // Panel and Cards style
+  .supplier-panel {
     display: flex;
     flex-wrap: wrap;
-
-    >div {
+  
+    > div {
+      flex-basis: 100%;
+  
+      @media (min-width: 576px) {
         flex-basis: 100%;
-
-        @media (min-width: 576px) {
-            flex-basis: 100%;
-        }
-
-        @media (min-width: 768px) {
-            flex-basis: 100%;
-        }
-
-        @media (min-width: 992px) {
-            flex-basis: 100%;
-        }
+      }
+  
+      @media (min-width: 768px) {
+        flex-basis: 100%;
+      }
+  
+      @media (min-width: 992px) {
+        flex-basis: 100%;
+      }
     }
-
+  
     .alert-danger {
-        font-weight: 100;
+      font-weight: 100;
     }
-
+  
     .alert-title {
-        font-size: medium;
+      font-size: medium;
     }
-
-
+  // Card Style
     .card {
-       
-        color: #ffffff;
-        position: relative;
-        background: #3ca859ad !important;
-        box-shadow: 0 8px 32px 0 rgba(30, 46, 50, 0.563) !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(50px) !important;
-
-
-
-        .card-body {
-            padding: 1rem;
-
-            .card-title {
-                font-weight:400;
-            }
-
-            .card-text {
-                margin-bottom: 0.5rem;
-                font-weight:100;
-            }
-
-            .btn {
-                margin-top: 0.5rem;
-                
-            }
+      color: #ffffff;
+      position: relative;
+      background: #126a16c4 !important;
+      box-shadow: 0 8px 32px 0 rgba(30, 46, 50, 0.563) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(50px) !important;
+  
+      .card-body {
+        padding: 1rem;
+  
+        .card-title {
+          font-weight: 400;
         }
+  
+        .card-text {
+          margin-bottom: 0.5rem;
+          font-weight: 100;
+        }
+  
+        .btn {
+          margin-top: 0.5rem;
+        }
+      }
     }
-}
+  }
+  
 

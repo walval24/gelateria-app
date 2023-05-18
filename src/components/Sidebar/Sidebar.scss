@@ -1,81 +1,70 @@
+// Navbar Style
 .navbar {
     height: 60px;
-}
+  }
 
-.offcanvas {
-
-
+  // Offcanvas
+  .offcanvas {
     background: #3ca85953 !important;
     box-shadow: 0 8px 32px 0 rgba(201, 231, 198, 0.37) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
-
-}
-
-.sidebar-toggle {
+  }
+  // Sidebar toggle
+  .sidebar-toggle {
     font-size: 1.50rem !important;
     padding: 0.2 1.25rem !important;
     border: none !important;
-   
-
-    &:hover {
-        background-color: #e6f916 !important;
   
-       
+    &:hover {
+      background-color: #e6f916 !important;
     }
-}
-
-.toggle {
+  }
+   // Toggle
+  .toggle {
     color: rgb(46, 131, 46);
-
-   
-}
-
-
-.offcanvas-header {
+  }
+   // Offcanvas Header
+  .offcanvas-header {
     font-size: 1.5rem;
     border-bottom: none;
     padding-bottom: 0;
-
-    
-
-
-
+  
     .close {
-        font-size: 2rem;
-        color: #1f512e;
+      font-size: 2rem;
+      color: #1f512e;
+      opacity: 1;
+  
+      &:hover,
+      &:focus {
+        color: #e6f916;
         opacity: 1;
-
-        &:hover,
-        &:focus {
-            color: #e6f916;
-            opacity: 1;
-        }
+      }
     }
-
+  
     .offcanvas-title {
-        color: white;
-        font-weight: 300;
-        font-size: 2rem;
-
+      color: white;
+      font-weight: 300;
+      font-size: 2rem;
     }
-}
-
-.offcanvas-body {
+  }
+  
+  // Offcanvas Body
+  .offcanvas-body {
     padding: 1rem;
-
-
+  
     ul.nav.flex-column {
-        li.nav-item {
-            a.nav-link {
-                color: white;
-                font-size: 1.2rem;
-                font-weight: 200;
-
-                &:hover {
-                    color: #e6f916;
-                }
-            }
+      li.nav-item {
+        a.nav-link {
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 200;
+  
+          &:hover {
+            color: #e6f916;
+          }
         }
+      }
     }
-}
+  }
+  
