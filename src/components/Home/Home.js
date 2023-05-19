@@ -2,20 +2,25 @@ import HomeCarousel from "./HomeCarousel";
 import Figure from 'react-bootstrap/Figure';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import './Home.scss';
 import HomeCards from "./HomeCards";
-import { useEffect, useState } from "react";
+import { useGet } from "../_Hooks/Customs";
+import { URL_PRODUCTS } from "../_Utils/Urls";
+import Loader from "../Loader/Loader";
+import './Home.scss';
 
 const Home = () => {
 
-    const [isLoading, setIsLoading] = useState(false);
+    const { data, error, isLoading } = useGet(URL_PRODUCTS)
+    if (isLoading) {
+        return (
+            < Loader />)
+    }
+    else if (data) {
 
+        return (
+            <div className="home">
 
-    return (
-        <div className="home">
-            {isLoading ? (<div className="loader">Caricamento...</div>) : (
                 <>
-
                     <Figure className="banner-figure">
                         <Figure.Image alt="logo" src="https://www.gelaterialacarraia.it/wp-content/uploads/2022/06/gelateria-lacarraia-firenze-logo.jpg" />
                     </Figure>
@@ -23,7 +28,7 @@ const Home = () => {
                         <HomeCarousel />
                     </div>
                     <div>
-                        <HomeCards  />
+                        <HomeCards products={data} />
                     </div>
                     <div className="map-section">
                         <h3>Come visit us !</h3>
@@ -57,9 +62,10 @@ const Home = () => {
 
                     </div>
                 </>
-            )}
-        </div>
-    );
+
+            </div>
+        );
+    }
 };
 
 export default Home;

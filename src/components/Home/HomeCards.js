@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { URL_PRODUCTS } from '../_Utils/Urls';
 import Slider from 'react-slick';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -8,21 +5,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 
-const HomeCards = () => {
-    const [products, setProducts] = useState([]);
+const HomeCards = ({products}) => {
+
     const base64prefix = 'data:image/jpeg;base64,';
-    useEffect(() => {
-        axios
-            .get(URL_PRODUCTS)
-            .then(response => {
-                setProducts(response.data);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    }, []);
-
-
 
     return (
         <div className="products-section">

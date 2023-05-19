@@ -9,24 +9,25 @@ import NewSupplier from "./components/SupplierPanel/NewSupplier";
 import EditSupplier from "./components/SupplierPanel/EditSupplier";
 
 
-
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="products" element={<Products />}>
-            <Route path="edit/:id" element={<EditProduct />}/>
-            <Route path="new" element={<NewProduct/>}/>
-          </Route>
-          <Route path="suppliers" element={<Suppliers/>} />
-          <Route path="suppliers/new" element={<NewSupplier/>}/>
-          <Route path="suppliers/edit/:id" element={<EditSupplier/>}/>
+
+
+return (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="products" element={<Products />}>
+          <Route path="edit/:id" element={<EditProduct />} />
+          <Route path="new" element={<NewProduct />} />
         </Route>
-      </Routes>
-    </Router>
-  );
+        <Route path="suppliers" element={<Suppliers />} />
+        <Route path="suppliers/new" element={<NewSupplier />} />
+        <Route path="suppliers/edit/:id" element={<EditSupplier />} />
+      </Route>
+    </Routes>
+  </Router>
+);
 }
 
 export default App;

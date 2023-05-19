@@ -119,7 +119,7 @@ const ProductPanel = ({ data = {}, mutate }) => {
                 </div>
                 <div className=" col-12">
                     <label className=" form-lable">Image</label>
-                    <input className=" form-control form-control-sm" required  type="file" name="cover" onChange={handleChange} />
+                    <input className=" form-control form-control-sm"  type="file" name="cover" onChange={handleChange} />
                 </div>
                 <div className=" col-6">
                     <label className=" form-lable">Supplier</label>

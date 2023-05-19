@@ -30,12 +30,12 @@ const ProductTable = ({ product, deleteSuccess }) => {
                 </td>
                 <td className="align-middle">
                     <div>
-                        {product.dairyFree ? <FontAwesomeIcon icon={faCheck} /> : <FontAwesomeIcon icon={faXmark} />}
+                        {product.dairyFree ? <FontAwesomeIcon icon={faCheck} color="green"/> : <FontAwesomeIcon icon={faXmark} color="red" />}
                     </div>
                 </td>
                 <td className="align-middle">
                     <div>
-                        {product.nutfree ? <FontAwesomeIcon icon={faCheck} /> : <FontAwesomeIcon icon={faXmark} />}
+                        {product.nutfree ? <FontAwesomeIcon icon={faCheck} color="green" /> : <FontAwesomeIcon icon={faXmark} color="red" />}
                     </div>
                 </td>
                 <td className="align-middle">
