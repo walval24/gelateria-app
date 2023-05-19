@@ -1,11 +1,12 @@
 import axios from "axios";
 import useSWR from "swr";
 
-
 const fetcher = (url) => axios.get(url).then(result => result.data);
 
 const useGet = (url, id = 0) => {
 
+
+    //READ - Metodo Get
     let finalUrl = url;
     if (id > 0) {
         finalUrl += ("/" + id);
@@ -22,6 +23,21 @@ const useGet = (url, id = 0) => {
     }
 
 }
+
+//CREATE - Metodo Post
+const usePost = (url) => {
+    return (data, successFn) => {
+        axios.post(url, data).then(result => {
+            if (result.data) {
+                successFn();
+            }
+        })
+    }
+
+}
+
+//UPDATE - Metodo PUT
+
 const usePut = (url, id) => {
 
     const finalUrl = url + "/" + id;
@@ -35,16 +51,7 @@ const usePut = (url, id) => {
     }
 }
 
-const usePost = (url) => {
-    return (data, successFn) => {
-        axios.post(url, data).then(result => {
-            if (result.data) {
-                successFn();
-            }
-        })
-    }
-
-}
+//DELETE - Metodo Delete
 
 const useDelete = (url,id) => {
     const finalUrl = url + "/" + id;
