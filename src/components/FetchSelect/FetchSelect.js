@@ -9,7 +9,7 @@ const FetchSelect = ({className, name, value,onChange, url}) => {
     if(data) {
   return (
     <select className={className} name={name} value={value} onChange={onChange}>
-            <option value={0}> - - Select - - - </option>
+            <option value={0}> - Select the Supllier - </option>
             {data.map(item => <option key={item.id} value={item.id}>{item.name}</option>)} {/* <option value="1"> Rock </option>*/}
     </select>
   );
@@ -17,7 +17,7 @@ const FetchSelect = ({className, name, value,onChange, url}) => {
 
 return (
     <select className=" form-control form-control-sm">
-         <option value={0}> - - Seleziona - - - </option>
+         <option value={0}> - No Suppliers data ! -  </option>
     </select>
 );
 
