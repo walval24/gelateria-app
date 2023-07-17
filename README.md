@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+
+![carraia-home](https://github.com/walval24/gelateria-app/assets/121091703/1555087a-b4e9-4e35-bd35-d6895001f6bc)
+
+![carraia-prod](https://github.com/walval24/gelateria-app/assets/121091703/47649028-4337-494a-b1e3-e2bc0914b15a)
+
+![carraia-java](https://github.com/walval24/gelateria-app/assets/121091703/9faa6f83-41d9-4f0d-81ca-6b7f739b5953)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
